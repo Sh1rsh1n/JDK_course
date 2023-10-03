@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="init commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="server app&#10;commit #001">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JDK_course.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDK_course.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_1/chat/server/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_1/chat/server/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_1/chat/server/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_1/chat/server/MainAppServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/ChatServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/MainApp.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,24 +34,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/DevFolder/JDK_course&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="src.main.seminar_1.chat.client" />
       <recent name="src.main.seminar_1.chat.server" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\DevFolder\JDK_course" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.seminar_1.chat.server.MainApp" />
+  <component name="RunManager" selected="Application.MainAppClient">
+    <configuration name="MainAppClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.seminar_1.chat.client.MainAppClient" />
+      <module name="JDK_course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.main.seminar_1.chat.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainAppServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.seminar_1.chat.server.MainAppServer" />
       <module name="JDK_course" />
       <extension name="coverage">
         <pattern>
@@ -63,7 +83,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.MainAppClient" />
+        <item itemvalue="Application.MainAppServer" />
       </list>
     </recent_temporary>
   </component>
@@ -75,7 +96,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696171878245</updated>
-      <workItem from="1696171880374" duration="3720000" />
+      <workItem from="1696171880374" duration="11545000" />
+      <workItem from="1696273825581" duration="3662000" />
+      <workItem from="1696355701684" duration="6697000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1696172088185</created>
@@ -84,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696172088185</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="server app&#10;commit #001">
+      <created>1696175943801</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696175943801</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +133,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="server app&#10;commit #001" />
+    <option name="LAST_COMMIT_MESSAGE" value="server app&#10;commit #001" />
   </component>
 </project>
