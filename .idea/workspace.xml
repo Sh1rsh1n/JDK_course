@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="server app&#10;commit #001">
+    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="added client app&#10;commit #003">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_1/chat/server/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_1/chat/server/ChatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_1/chat/server/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_1/chat/server/MainAppServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/ChatServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/MainApp.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,8 @@
       <updated>1696171878245</updated>
       <workItem from="1696171880374" duration="11545000" />
       <workItem from="1696273825581" duration="3662000" />
-      <workItem from="1696355701684" duration="6697000" />
+      <workItem from="1696355701684" duration="7185000" />
+      <workItem from="1696438364532" duration="3891000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1696172088185</created>
@@ -114,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696175943801</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added client app&#10;commit #002">
+      <created>1696364692803</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696364692803</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added client app&#10;commit #003">
+      <created>1696364714941</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696364714941</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +145,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="server app&#10;commit #001" />
-    <option name="LAST_COMMIT_MESSAGE" value="server app&#10;commit #001" />
+    <MESSAGE value="added client app&#10;commit #002" />
+    <MESSAGE value="added client app&#10;commit #003" />
+    <option name="LAST_COMMIT_MESSAGE" value="added client app&#10;commit #003" />
   </component>
 </project>
