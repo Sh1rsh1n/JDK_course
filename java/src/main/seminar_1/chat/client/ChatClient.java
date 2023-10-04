@@ -31,7 +31,7 @@ public class ChatClient extends JFrame {
     private JTextField port = new JTextField("241");
     private JTextField login = new JTextField();
     private JPasswordField password = new JPasswordField();
-    private JButton loginBtn = new JButton("login");
+    private JButton loginBtn = new JButton("Подключиться");
 
     // область текста
     private JTextArea log = new JTextArea();
@@ -66,23 +66,27 @@ public class ChatClient extends JFrame {
         userLoginPanel.add(login);
         userLoginPanel.add(password);
         userLoginPanel.add(loginBtn);
-
+        
+        // добавляем элементы на верхнюю панель
         headerPanel.add(serverSettingsPanel);
         headerPanel.add(userLoginPanel);
 
+        // добавляем саму панель в наше окно
         add(headerPanel, BorderLayout.NORTH);
 
         //центральная област отображения текста
-        log.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(log);
-        add(scrollPane);
+        log.setEditable(false); // запрещаем редактировать область текста 
+        JScrollPane scrollPane = new JScrollPane(log); // создаем скролл панель и внедряем в нее область текста
+        add(scrollPane); // добавляем скролл панель
         scrollPane.setVisible(false);
 
+        // добавляем элементы на нижнюю панель и привязваем саму панель к окну
         footerPanel.add(messageField, BorderLayout.CENTER);
         footerPanel.add(sendBtn, BorderLayout.EAST);
         footerPanel.setVisible(false);
         add(footerPanel, BorderLayout.SOUTH);
 
+        // добавляем список пользователей
         String[] userArray = new String[]{"Alex", "Pavel", "Anna"};
         jList.setListData(userArray);
         jList.setVisible(false);
@@ -90,13 +94,15 @@ public class ChatClient extends JFrame {
 
         setVisible(true);
 
+        // слушатель событий для кнопки "Подключиться"
         loginBtn.addActionListener(e -> {
+            // проверка логина и пароля для входа
             if (!checkLogin(login.getText(), password.getText())) {
                 JOptionPane.showMessageDialog(this,
                         "Неверный логин или пароль",
                         "Ошибка авторизации.", JOptionPane.ERROR_MESSAGE);
             } else {
-
+                // чтение сообщений из лог файла при подключении
                 try (BufferedReader br = new BufferedReader(new FileReader(LOG_FILE))) {
                     String str;
                     while ((str = br.readLine()) != null) {
@@ -138,7 +144,7 @@ public class ChatClient extends JFrame {
             }
         });
 
-        // отправка сообщения в чат
+        // слушатель событий нажатия для кнопки "Отправить"
         sendBtn.addActionListener(e -> {
             log.append(String.format("%s %s %s\n",
                     jList.getSelectedValue(),
