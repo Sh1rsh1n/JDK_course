@@ -1,6 +1,7 @@
 package src.main.seminar_2.chat.server;
 
-import src.main.seminar_2.chat.repository,*;
+import src.main.seminar_2.chat.repository.*;
+import src.main.seminar_2.chat.client.ClientGUI;
 
 public class Server {
 
@@ -47,22 +48,21 @@ public class Server {
         if (!work){
             return;
         }
-        appendLog(text);
         answerAll(text);
         saveInLog(text);
     }
 
-    private void answerAll(String text){
-        for (ClientGUI client: getClientRepository.getAll()){}
-            client.answer(text);
+    public void answerAll(String text){
+        for (ClientGUI client: clientRepository.getAll()){
+            client.appendLog(text);
         }
     }
 
-    private void saveInLog(String text){
+    public void saveInLog(String text){
         messageRepository.add(text);
     }
 
-    private String readLog(){
+    public String readLog(){
         StringBuilder sb = new StringBuilder();
         for (String str : messageRepository.getAll()) {
           sb.append(str);

@@ -11,12 +11,12 @@ public class ServerGUI extends JFrame {
 
   private JButton btnStart, btnStop;
   private JTextArea log;
-  
+
   private Server server;
 
   public ServerGUI() {
-  
-    server = new Server(this)
+
+    server = new Server(this);
 
     setDefaultCloseOperation(EXIT_ON_CLOSE);
     setSize(WIDTH, HEIGHT);
@@ -27,18 +27,18 @@ public class ServerGUI extends JFrame {
     createPanel();
 
     setVisible(true);
-    
+
   }
 
   private void createPanel() {
-      log = new JTextArea();
-      ScrollPane sp = new ScrollPane(log);
-      add(sp);
-      add(createButtons(), BorderLayout.SOUTH);
+    log = new JTextArea();
+    ScrollPane sp = new ScrollPane(log);
+    add(sp);
+    add(createButtons(), BorderLayout.SOUTH);
   }
 
   private Component createButtons() {
-  
+
     JPanel panel = new JPanel(new GridLayout(1, 2));
     btnStart = new JButton("Старт");
     btnStop = new JButton("Стоп");
@@ -46,30 +46,30 @@ public class ServerGUI extends JFrame {
     btnStart.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        if (work){
-            server.saveInLog("** Сервер уже был запущен **");
+        if (work) {
+          server.save("** Сервер уже был запущен **");
         } else {
-            work = true;
-            server.saveInLog("** Сервер запущен! **");
+          work = true;
+          server.save("** Сервер запущен! **");
         }
       }
-  });
+    });
 
-  btnStop.addActionListener(new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent e) {
-      if (!work){
+    btnStop.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        if (!work) {
           server.saveInLog("** Сервер уже был остановлен **");
-      } else {
+        } else {
           work = false;
-          for (ClientGUI client: server.getClientRepository().getAll()) {
-              server.disconnectUser(client);
+          for (ClientGUI client : server.getClientRepository().getAll()) {
+            server.disconnectUser(client);
           }
-          //TODO поправить удаление
-          server.saveInLog("** Сервер остановлен! **");
+          // TODO поправить удаление
+          server.save("** Сервер остановлен! **");
+        }
       }
-    }
-  });
+    });
 
     panel.add(btnStart);
     panel.add(btnStop);

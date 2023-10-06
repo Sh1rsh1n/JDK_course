@@ -1,6 +1,6 @@
 package src.main.seminar_2.chat.repository;
 
-
+import java.util.List;
 
 /*
  * интерфейс репозиторий, предоставляет стандартные операции

@@ -1,6 +1,9 @@
 package src.main.seminar_2.chat.repository;
 
+import java.util.List;
+import java.util.ArrayList;
 
+import src.main.seminar_2.chat.client.ClientGUI;
 
 
 public class ClientRepository implements Repository<ClientGUI> {
@@ -22,7 +25,7 @@ public class ClientRepository implements Repository<ClientGUI> {
   }
   
   @Override
-  public String getByIndex(int index) {
+  public ClientGUI getByIndex(int index) {
     return listClients.get(index);
   }
 

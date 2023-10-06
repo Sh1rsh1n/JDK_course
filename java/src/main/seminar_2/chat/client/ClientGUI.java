@@ -1,6 +1,7 @@
 package src.main.seminar_2.chat.client;
 
 import src.main.seminar_2.chat.server.Server;
+import src.main.seminar_2.chat.server.ServerGUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +19,7 @@ public class ClientGUI extends JFrame implements ClientView{
 
     private Client client;
 
-    public ClientGUI(Server server){
+    public ClientGUI(ServerGUI server){
         this.client = new Client(this, server);
 
         setSize(WIDTH, HEIGHT);
@@ -56,7 +57,7 @@ public class ClientGUI extends JFrame implements ClientView{
         tfMessage.setText("");
     }
 
-    private void appendLog(String text){
+    public void appendLog(String text){
         log.append(text + "\n");
     }
 

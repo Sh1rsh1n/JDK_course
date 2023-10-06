@@ -4,14 +4,12 @@ import java.io.*;
 import java.util.List;
 
 /**
- * Репозиторий для хранения сообщений, взаимодействует с обычным текстовым файлом
+ * Репозиторий для хранения сообщений, взаимодействует с обычным текстовым
+ * файлом
  */
 public class TextFileRepository extends MessageRepository {
 
-  privat final static String FILE_PATH = "logMessage.txt"
-  
-  private BufferedReader br;
-  private BufferedWriter bw;
+  private final static String FILE_PATH = "logMessage.txt";
 
   public TextFileRepository() {
     super();
@@ -36,22 +34,14 @@ public class TextFileRepository extends MessageRepository {
   }
 
   /**
-   * Получаем все сообщения из репозитория
-   */
-  @Override
-  public List<String> getAll() {
-    return listMessage;
-  }
-
-  /**
    * загружаем все сообщения, которые хранятся в файле
    */
   private void loadMessage() {
 
-    try (br = new BufferedReader(new FileReader(FILE_PATH))) {
+    try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
       String str; 
-      while ((str = br.readline) != null) {
-        if (!str.srartWith("**") && !str.endsWith("**")) {
+      while ((str = br.readLine()) != null) {
+        if (!str.startsWith("**") && !str.endsWith("**")) {
           listMessage.add(str);
         }
     } catch (IOException ex) {
@@ -64,7 +54,7 @@ public class TextFileRepository extends MessageRepository {
    */
   private void writeMessage(String message) {
 
-    try (bw = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
       bw.write(message);
       bw.write("\n");
       bw.flush();

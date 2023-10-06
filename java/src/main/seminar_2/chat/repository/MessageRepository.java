@@ -1,5 +1,7 @@
 package src.main.seminar_2.chat.repository;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 /*
@@ -9,7 +11,7 @@ public abstract class MessageRepository implements Repository<String> {
 
   protected List<String> listMessage;
   
-  public ChatRepository(){
+  public MessageRepository(){
     listMessage = new ArrayList<>();
   }
   
