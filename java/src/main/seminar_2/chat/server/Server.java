@@ -3,29 +3,30 @@
 public class Server {
 
   private ServerGUI serverGUI;
-  private Repository repository;
-  private List<Client> clientList;
+  private MessageRepository messageRepository;
+  private ClientRepository clientRepository;
   private boolean work;
 
-  public Server(){
-    clientList = new ArrayList<>();
-
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
-    setSize(WIDTH, HEIGHT);
-    setResizable(false);
-    setTitle("Chat server");
-    setLocationRelativeTo(null);
-
-    createPanel();
-
-    setVisible(true);
+  public Server(ServerGUI serverGUI) {
+  
+    this.serverGUI = serverGUI;
+    messageRepository = new TextFileRepository();
+    clientRepository = new ClientRepository();
+  }
+  
+  public ClientRepository getClientRepository(){
+    return clientRepository;
+  }
+  
+  public MessageRepository getMessageRepository(){
+    return messageRepository;
   }
 
-    public boolean connectUser(Client client){
+    public boolean connectUser(ClientGUI client){
       if (!work){
           return false;
       }
-      clientList.add(client);
+      clientRepository.add(client);
       return true;
     }
 
@@ -33,10 +34,10 @@ public class Server {
         return readLog();
     }
 
-    public void disconnectUser(Client client){
-        clientList.remove(client);
+    public void disconnectUser(ClientGUI client){
         if (client != null){
-            client.disconnectFromServer();
+          clientRepository.remove(client);
+          client.disconnectFromServer();
         }
     }
 
@@ -50,38 +51,20 @@ public class Server {
     }
 
     private void answerAll(String text){
-        for (Client client: clientList){}
-            clientGUI.answer(text);
+        for (ClientGUI client: getClientRepository.getAll()){}
+            client.answer(text);
         }
     }
 
     private void saveInLog(String text){
-        try (FileWriter writer = new FileWriter(LOG_PATH, true)){
-            writer.write(text);
-            writer.write("\n");
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        messageRepository.add(text);
     }
 
     private String readLog(){
-        StringBuilder stringBuilder = new StringBuilder();
-        try (FileReader reader = new FileReader(LOG_PATH);){
-            int c;
-            while ((c = reader.read()) != -1){
-                stringBuilder.append((char) c);
-            }
-            stringBuilder.delete(stringBuilder.length()-1, stringBuilder.length());
-            return stringBuilder.toString();
-        } catch (Exception e){
-            e.printStackTrace();
-            return null;
+        StringBuilder sb = new StringBuilder();
+        for (String str : messageRepository.getAll()) {
+          sb.append(str);
         }
+        return sb.toString();
     }
-
-    private void appendLog(String text){
-        log.append(text + "\n");
-    }
-
-    
 }

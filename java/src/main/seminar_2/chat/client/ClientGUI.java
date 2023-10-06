@@ -1,6 +1,6 @@
 package src.main.seminar_2.chat.client;
 
-import src.main.seminar_2.chat.server.ServerWindow;
+import src.main.seminar_2.chat.server.Server;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ public class ClientGUI extends JFrame implements ClientView{
 
     private Client client;
 
-    public ClientGUI(ServerWindow server){
+    public ClientGUI(Server server){
         this.client = new Client(this, server);
 
         setSize(WIDTH, HEIGHT);

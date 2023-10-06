@@ -3,15 +3,15 @@
 /**
  * Репозиторий для хранения сообщений, взаимодействует с обычным текстовым файлом
  */
-public class TextFileRepository extends ChatRepository {
+public class TextFileRepository extends MessageRepository {
 
   privat final static String FILE_PATH = "logMessage.txt"
-  private List<String> listMessage;
+  
   private BufferedReader br;
   private BufferedWriter bw;
 
   public TextFileRepository() {
-    listMessage = new ArrayList<>();
+    super();
     loadMessage();
   }
 
@@ -19,24 +19,24 @@ public class TextFileRepository extends ChatRepository {
    * добавляем сообщение в список и сохраняем в текстовый файл
    */
   @Override
-  public void saveMessage(String message) {
+  public void add(String message) {
     listMessage.add(message);
     writeMessage(message);
   }
 
   /**
-   * получаем последнее сообщение из репозитория
+   * получаем сообщение из репозитория по индексу списка
    */
   @Override
-  public String getLastMessage() {
-    return listMessage.get(listMessage.size - 1);
+  public String getByIndex(int index) {
+    return listMessage.get(index);
   }
 
   /**
    * Получаем все сообщения из репозитория
    */
   @Override
-  public List<String> getAllMessages() {
+  public List<String> getAll() {
     return listMessage;
   }
 

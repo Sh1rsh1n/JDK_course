@@ -4,14 +4,15 @@ package src.main.seminar_2.chat.client;
 import src.main.seminar_2.chat.server.ServerWindow;
 
 public class Client {
+
     private String name;
     private ClientView clientView;
-    private ServerWindow server;
+    private Server server;
     private boolean connected;
 
-    public Client(ClientView clientView, ServerWindow serverWindow) {
+    public Client(ClientView clientView, Server server) {
         this.clientView = clientView;
-        this.server = serverWindow;
+        this.server = server;
     }
 
     public boolean connectToServer(String name){
