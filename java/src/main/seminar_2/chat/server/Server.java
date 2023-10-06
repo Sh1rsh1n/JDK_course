@@ -1,4 +1,6 @@
+package src.main.seminar_2.chat.server;
 
+import src.main.seminar_2.chat.repository,*;
 
 public class Server {
 

@@ -1,3 +1,5 @@
+package src.main.seminar_2.chat.repository;
+
 
 
 /*

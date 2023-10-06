@@ -1,7 +1,7 @@
 package src.main.seminar_2.chat.client;
 
 
-import src.main.seminar_2.chat.server.ServerWindow;
+import src.main.seminar_2.chat.server.Server;
 
 public class Client {
 

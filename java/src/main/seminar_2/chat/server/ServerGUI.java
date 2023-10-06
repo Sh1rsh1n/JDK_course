@@ -1,5 +1,8 @@
 package src.main.seminar_2.chat.server;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class ServerGUI extends JFrame {
 

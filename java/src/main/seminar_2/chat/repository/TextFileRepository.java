@@ -1,4 +1,7 @@
+package src.main.seminar_2.chat.repository;
 
+import java.io.*;
+import java.util.List;
 
 /**
  * Репозиторий для хранения сообщений, взаимодействует с обычным текстовым файлом
