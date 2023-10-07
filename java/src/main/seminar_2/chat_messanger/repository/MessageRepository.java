@@ -6,7 +6,7 @@ import java.util.List;
 
 
 /*
- * абстрактный класс ChatRepository, реализует интерфейс Repository
+ * Репозиторий для хранения текстовых сообщений
  */
 public abstract class MessageRepository implements Repository<String> {
 

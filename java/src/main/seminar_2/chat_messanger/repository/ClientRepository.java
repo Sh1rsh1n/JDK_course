@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Класс репозиторий с пользователями,
+ * Класс репозиторий для хранения списка подключившихся пользователей,
  * выполняет все операция для взаимодействия с пользователями
  */
 public class ClientRepository implements Repository<Client> {

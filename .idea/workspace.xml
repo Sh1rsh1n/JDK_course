@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="seminar_2&#10;init commit">
-      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/repository/TextFileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/server/ServerGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/server/ServerWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logMessage.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_2/chat_messanger/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/client/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/client/ClientGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/client/ClientGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/client/ClientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/client/ClientView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/repository/ClientRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/repository/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/repository/MessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_2/chat_messanger/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/repository/TextFileRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/server/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_2/chat/server/ServerGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/client/ChatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/client/ChatClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/ChatServer.class" afterDir="false" />
-    </list>
+    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="seminar_2&#10;init commit #006" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +132,7 @@
       <workItem from="1696448883167" duration="52000" />
       <workItem from="1696617939000" duration="940000" />
       <workItem from="1696684713337" duration="8541000" />
-      <workItem from="1696695147743" duration="14440000" />
+      <workItem from="1696695147743" duration="14508000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1696172088185</created>
@@ -193,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696448926585</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="seminar_2&#10;init commit #006">
+      <created>1696711219849</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696711219849</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +199,7 @@
     <MESSAGE value="added client app&#10;commit #002" />
     <MESSAGE value="added client app&#10;commit #003" />
     <MESSAGE value="seminar_2&#10;init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="seminar_2&#10;init commit" />
+    <MESSAGE value="seminar_2&#10;init commit #006" />
+    <option name="LAST_COMMIT_MESSAGE" value="seminar_2&#10;init commit #006" />
   </component>
 </project>

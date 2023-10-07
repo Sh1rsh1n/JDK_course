@@ -5,6 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * графический интерфейс для взаимодействия с сервером
+ */
 public class ServerGUI extends JFrame {
 
     public static final int WIDTH = 400;
@@ -29,16 +32,27 @@ public class ServerGUI extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * выводим сообщение в область текста основного окна
+     * @param text
+     */
     public void appendLog(String text){
         log.append(text + "\n");
     }
 
+    /**
+     * создаем панель с компонентами в основном окне
+     */
     private void createPanel() {
         log = new JTextArea();
         add(log);
         add(createButtons(), BorderLayout.SOUTH);
     }
 
+    /**
+     * создаем кнопки и прописываем слушателей и их действия при нажатии на них
+     * @return
+     */
     private Component createButtons() {
         JPanel panel = new JPanel(new GridLayout(1, 2));
         btnStart = new JButton("Start");
@@ -83,6 +97,9 @@ public class ServerGUI extends JFrame {
         return panel;
     }
 
+    /**
+     * переключение кнопок в зависимости от того в каком состоянии сервер
+     */
     private void switchShowButtons() {
         if (btnStart.isEnabled()) {
             btnStart.setEnabled(false);

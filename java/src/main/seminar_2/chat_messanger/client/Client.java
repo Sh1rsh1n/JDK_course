@@ -4,6 +4,9 @@ import src.main.seminar_2.chat_messanger.server.Server;
 
 import java.util.Objects;
 
+/**
+ * Клиентская часть подключения к серверу
+ */
 public class Client {
     private String name;
     private ClientView clientView;
