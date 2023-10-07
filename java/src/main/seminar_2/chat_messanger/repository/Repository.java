@@ -1,4 +1,4 @@
-package src.main.seminar_2.chat.repository;
+package src.main.seminar_2.chat_messanger.repository;
 
 import java.util.List;
 

@@ -1,6 +1,7 @@
-package src.main.seminar_2.chat.repository;
+package src.main.seminar_2.chat_messanger.repository;
 
-import java.util.ArrayList;
+
+import java.util.LinkedList;
 import java.util.List;
 
 
@@ -12,7 +13,7 @@ public abstract class MessageRepository implements Repository<String> {
   protected List<String> listMessage;
   
   public MessageRepository(){
-    listMessage = new ArrayList<>();
+    listMessage = new LinkedList<>();
   }
   
   @Override

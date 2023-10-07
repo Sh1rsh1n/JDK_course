@@ -1,13 +1,15 @@
-package src.main.seminar_2.chat.client;
+package src.main.seminar_2.chat_messanger.client;
 
-import src.main.seminar_2.chat.server.Server;
-import src.main.seminar_2.chat.server.ServerGUI;
+import src.main.seminar_2.chat_messanger.server.Server;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class ClientGUI extends JFrame implements ClientView{
+/**
+ * графический интерфейс приложения для пользователей
+ */
+public class ClientGUI extends JFrame implements ClientView {
     public static final int WIDTH = 400;
     public static final int HEIGHT = 300;
 
@@ -19,55 +21,87 @@ public class ClientGUI extends JFrame implements ClientView{
 
     private Client client;
 
-    public ClientGUI(ServerGUI server){
+    private Server server;
+
+    public ClientGUI(Server server) {
+        this.server = server;
         this.client = new Client(this, server);
 
         setSize(WIDTH, HEIGHT);
         setResizable(false);
         setTitle("Chat client");
-        setLocation(server.getX() - 500, server.getY());
+        setLocation(500, 500);
 
         createPanel();
 
         setVisible(true);
     }
 
+    /**
+     * подключение к серверу
+     */
     private void connectToServer() {
-        if (client.connectToServer(tfLogin.getText())){
+        if (client.connectToServer(tfLogin.getText())) {
             hideHeaderPanel(false);
         }
     }
 
-    @Override
-    public void showMessage(String text) {
-        appendLog(text);
-    }
-
+    /**
+     * отключение пользователя от сервера
+     */
     public void disconnectFromServer() {
         hideHeaderPanel(true);
         client.disconnect();
     }
 
-    private void hideHeaderPanel(boolean visible){
+    /**
+     * отображение(добавление) сообщений в чат
+     * @param text
+     */
+    @Override
+    public void showMessage(String text) {
+        appendLog(text);
+    }
+
+    /**
+     * скрыть панель с настройками подключения пользователя
+     * @param visible
+     */
+    private void hideHeaderPanel(boolean visible) {
         headerPanel.setVisible(visible);
     }
 
-    public void sendMessage(){
+    /**
+     * отправка сообщения пользователем
+     */
+    public void sendMessage() {
         client.sendMessage(tfMessage.getText());
         tfMessage.setText("");
     }
 
-    public void appendLog(String text){
+    /**
+     * добавление сообщения в поле с сообщениями
+     * @param text
+     */
+    private void appendLog(String text) {
         log.append(text + "\n");
     }
 
+    /**
+     * заполняем основное окно панелями с полями взаимодействия с пользователем
+     */
     private void createPanel() {
         add(createHeaderPanel(), BorderLayout.NORTH);
         add(createLog());
         add(createFooter(), BorderLayout.SOUTH);
+
     }
 
-    private Component createHeaderPanel(){
+    /**
+     * верхняя панель (панель настроек входа)
+     * @return
+     */
+    private Component createHeaderPanel() {
         headerPanel = new JPanel(new GridLayout(2, 3));
         tfIPAddress = new JTextField("127.0.0.1");
         tfPort = new JTextField("8189");
@@ -91,19 +125,27 @@ public class ClientGUI extends JFrame implements ClientView{
         return headerPanel;
     }
 
-    private Component createLog(){
+    /**
+     * панель чата (текстовая область)
+     * @return
+     */
+    private Component createLog() {
         log = new JTextArea();
         log.setEditable(false);
         return new JScrollPane(log);
     }
 
+    /**
+     * нижняя панель (отправка сообщения)
+     * @return
+     */
     private Component createFooter() {
         JPanel panel = new JPanel(new BorderLayout());
         tfMessage = new JTextField();
         tfMessage.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (e.getKeyChar() == '\n'){
+                if (e.getKeyChar() == '\n') {
                     sendMessage();
                 }
             }
@@ -120,10 +162,14 @@ public class ClientGUI extends JFrame implements ClientView{
         return panel;
     }
 
+    /**
+     * действие при закрытии основного окна
+     * @param
+     */
     @Override
     protected void processWindowEvent(WindowEvent e) {
         super.processWindowEvent(e);
-        if (e.getID() == WindowEvent.WINDOW_CLOSING){
+        if (e.getID() == WindowEvent.WINDOW_CLOSING) {
             disconnectFromServer();
         }
     }
