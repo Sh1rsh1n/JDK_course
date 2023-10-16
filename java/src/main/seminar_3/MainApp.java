@@ -1,7 +1,7 @@
 package src.main.seminar_3;
 
 import java.util.Random;
-
+import static src.main.seminar_3.Calculator.*;
 /*
 1. Написать класс Калькулятор (необобщенный), который содержит обобщенные статические методы: sum(), multiply(), divide(), subtract().
 Параметры этих методов – два числа разного типа (но необязательно разного между собой), над которыми должна быть произведена операция.
@@ -24,10 +24,10 @@ public class MainApp {
         double doubleValue = rnd.nextDouble() + rnd.nextInt(100);
         float floatValue = rnd.nextFloat() + rnd.nextInt(100);
 
-        System.out.printf("%d + %f = %f\n", intValue, doubleValue, Calculator.sum(intValue, doubleValue));
-        System.out.printf("%f - %f = %f\n", floatValue, doubleValue, Calculator.subtract(floatValue, doubleValue));
-        System.out.printf("%f * %d = %f\n", floatValue, intValue, Calculator.multiply(floatValue, intValue));
-        System.out.printf("%f / %d = %f\n", doubleValue, intValue, Calculator.division(doubleValue, intValue));
+        System.out.printf("%d + %f = %f\n", intValue, doubleValue, sum(intValue, doubleValue));
+        System.out.printf("%f - %f = %f\n", floatValue, doubleValue, subtract(floatValue, doubleValue));
+        System.out.printf("%f * %d = %f\n", floatValue, intValue, multiply(floatValue, intValue));
+        System.out.printf("%f / %d = %f\n", doubleValue, intValue, division(doubleValue, intValue));
         //endregion
 
         //region Task2
