@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="seminar_2&#10;init commit #006" />
+    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="seminar_2&#10;init commit #007&#10;added JavaDoc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,17 +30,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/DevFolder/JDK_course/java/src/main/temp/repository",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/DevFolder/JDK_course/java/src/main/temp/repository&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="src.main.seminar_1.chat.client" />
@@ -55,13 +57,26 @@
       <recent name="src.main.temp.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.src.main.seminar_2.chat_messanger.Main">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.temp.Main" />
       <module name="JDK_course" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="src.main.temp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.seminar_3.MainApp" />
+      <module name="JDK_course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.main.seminar_3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,6 +125,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainApp" />
         <item itemvalue="Application.src.main.seminar_2.chat_messanger.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MainAppClient" />
@@ -133,6 +149,15 @@
       <workItem from="1696617939000" duration="940000" />
       <workItem from="1696684713337" duration="8541000" />
       <workItem from="1696695147743" duration="14508000" />
+      <workItem from="1696711315048" duration="832000" />
+      <workItem from="1696747918094" duration="90000" />
+      <workItem from="1696876967949" duration="857000" />
+      <workItem from="1696877845301" duration="419000" />
+      <workItem from="1696879177843" duration="216000" />
+      <workItem from="1696879497661" duration="14000" />
+      <workItem from="1697043898257" duration="1430000" />
+      <workItem from="1697130811589" duration="16000" />
+      <workItem from="1697475662007" duration="3450000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1696172088185</created>
@@ -176,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696711219849</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="seminar_2&#10;init commit #007&#10;added JavaDoc">
+      <created>1696712142248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696712142248</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +232,7 @@
     <MESSAGE value="added client app&#10;commit #003" />
     <MESSAGE value="seminar_2&#10;init commit" />
     <MESSAGE value="seminar_2&#10;init commit #006" />
-    <option name="LAST_COMMIT_MESSAGE" value="seminar_2&#10;init commit #006" />
+    <MESSAGE value="seminar_2&#10;init commit #007&#10;added JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="seminar_2&#10;init commit #007&#10;added JavaDoc" />
   </component>
 </project>
