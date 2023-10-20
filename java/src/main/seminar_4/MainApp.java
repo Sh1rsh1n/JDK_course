@@ -20,10 +20,6 @@ public class MainApp {
     public static void main(String[] args) {
 
         Employee emp1 = new Employee("Pavel", "Ivanov", 4);
-
-        Handbook hb = new EmployeeHandbook();
-        HandbookHandler hh = new EmployeeHandbookHandler(nb);
-
         
     }
 

@@ -12,11 +12,23 @@ public abstract class Handbook<E> {
         handbooks = new ArrayList<>();
     }
     
-    public List<E> getHandbooks(){
-        return handbooks;
+    protected List<E> getHandbooks(){
+        return List.of(handbooks);
     }
     
-    public void setHandbook(List<E> handbooks){
+    protected void setHandbook(List<E> handbooks){
         this.handbooks = handbooks;
+    }
+    
+    protected boolean addElement(E element) {
+        return handbooks.add(element);
+    }
+    
+    protected boolean removeElement(E element) {
+        return handbooks.removeIf(e -> e.equals(element));
+    }
+    
+    protected E getElementById(int id){
+        return handbooks.get(id);
     }
 }
