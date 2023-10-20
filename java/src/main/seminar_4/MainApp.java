@@ -1,6 +1,7 @@
 package src.main.seminar_4;
 
-
+import src.main.seminar_4.models.handbooks.*;
+import src.main.seminar_4.models.Employee;
 /*
 Создать справочник сотрудников
 Необходимо:
@@ -15,5 +16,15 @@ package src.main.seminar_4;
 Добавить метод добавление нового сотрудника в справочник
 */
 public class MainApp {
+
+    public static void main(String[] args) {
+
+        Employee emp1 = new Employee("Pavel", "Ivanov", 4);
+
+        Handbook hb = new EmployeeHandbook();
+        HandbookHandler hh = new EmployeeHandbookHandler(nb);
+
+        
+    }
 
 }
