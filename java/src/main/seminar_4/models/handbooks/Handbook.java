@@ -1,34 +1,15 @@
-package src.main.seminar_4.model.handbooks;
+package src.main.seminar_4.models.handbooks;
+
 
 import java.util.List;
-import java.util.ArrayList;
 
+public interface Handbook<E> {
 
-public abstract class Handbook<E> {
+    boolean addElement(E element);
     
-    protected List<E> handbooks;
+    boolean removeElement(E element);
     
-    public Handbook(){
-        handbooks = new ArrayList<>();
-    }
-    
-    protected List<E> getHandbooks(){
-        return List.of(handbooks);
-    }
-    
-    protected void setHandbook(List<E> handbooks){
-        this.handbooks = handbooks;
-    }
-    
-    protected boolean addElement(E element) {
-        return handbooks.add(element);
-    }
-    
-    protected boolean removeElement(E element) {
-        return handbooks.removeIf(e -> e.equals(element));
-    }
-    
-    protected E getElementById(int id){
-        return handbooks.get(id);
-    }
+    E getElementById(int id);
+
+    List<E> getAll();
 }
