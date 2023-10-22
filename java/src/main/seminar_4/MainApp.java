@@ -3,7 +3,8 @@ package src.main.seminar_4;
 import src.main.seminar_4.models.Employee;
 import src.main.seminar_4.models.handbooks.EmployeeHandbook;
 import src.main.seminar_4.models.handbooks.Handbook;
-import src.main.seminar_4.services.HandbookService;
+import src.main.seminar_4.services.EmployeeHandbookService;
+import src.main.seminar_4.services.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +27,7 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        Service<Employee> handbookService = new HandbookService<>(new EmployeeHandbook());
+        Service<Employee> handbookService = new EmployeeHandbookService(new EmployeeHandbook());
 
         //region add Employee to handbook 
         Employee emp1 = new Employee("Pavel", "Ivanov", 4);
