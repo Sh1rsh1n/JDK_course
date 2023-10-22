@@ -39,11 +39,15 @@ public class MainApp {
         Handbook<Employee> handbook = new EmployeeHandbook();
         HandbookService<Employee> handbookService = new HandbookService<>(handbook);
 
-        findEmployeesByExperience(handbookService.getHandbook(), 4);
+       // findEmployeesByExperience(handbookService.getHandbook(), 4);
 
+       
         Employee emp1 = new Employee("Pavel", "Ivanov", 4);
         emp1.setPhones(Arrays.asList("+79876543210", "+79634561245"));
 
+        handbookService.getHandbook().addElement(emp1);
+
+        
 
         System.out.println(emp1);
     }
