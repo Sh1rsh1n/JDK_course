@@ -8,29 +8,27 @@ import java.util.List;
 
 public class EmployeeHandbook implements Handbook<Employee> {
 
-    private final List<Employee> employees;
-
     public EmployeeHandbook() {
-        employees = new ArrayList<>();
+        super();
     }
 
     @Override
     public boolean addElement(Employee employee) {
-        return employees.add(employee);
+        return super.list.add(employee);
     }
 
     @Override
     public boolean removeElement(Employee employee) {
-        return false;
+        return super.list.remove(employee);
     }
 
     @Override
     public Employee getElementById(int id) {
-        return employees.get(id);
+        return super.list.get(id);
     }
 
     @Override
     public List<Employee> getAll() {
-        return employees;
+        return super.list;
     }
 }

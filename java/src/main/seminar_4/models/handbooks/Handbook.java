@@ -3,13 +3,19 @@ package src.main.seminar_4.models.handbooks;
 
 import java.util.List;
 
-public interface Handbook<E> {
+public abstract class Handbook<E> {
 
-    boolean addElement(E element);
-    
-    boolean removeElement(E element);
-    
-    E getElementById(int id);
+    private final List<E> list;
 
-    List<E> getAll();
+    public Handbook() {
+        list = new ArrayList<>();
+    }
+
+    public abstract boolean addElement(E element);
+    
+    public abstract boolean removeElement(E element);
+    
+    public abstract E getElementById(int id);
+
+    public abstract List<E> getAll();
 }
