@@ -6,7 +6,7 @@ public class HandbookService<E> {
 
     private Handbook<E> handbook;
 
-    public HandbookService(E handbook){
+    public HandbookService(Handbook<E> handbook){
         this.handbook = handbook;
     }
 

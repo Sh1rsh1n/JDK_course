@@ -2,10 +2,11 @@ package src.main.seminar_4.models.handbooks;
 
 
 import java.util.List;
+import java.util.ArrayList;
 
 public abstract class Handbook<E> {
 
-    private final List<E> list;
+    protected List<E> list;
 
     public Handbook() {
         list = new ArrayList<>();
