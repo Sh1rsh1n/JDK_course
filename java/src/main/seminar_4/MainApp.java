@@ -2,13 +2,9 @@ package src.main.seminar_4;
 
 import src.main.seminar_4.models.Employee;
 import src.main.seminar_4.models.handbooks.EmployeeHandbook;
-import src.main.seminar_4.models.handbooks.Handbook;
 import src.main.seminar_4.services.EmployeeHandbookService;
-import src.main.seminar_4.services.Service;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /*
 Создать справочник сотрудников
@@ -18,18 +14,19 @@ import java.util.List;
 Номер телефона
 Имя
 Стаж
-Добавить метод, который ищет сотрудника по стажу (может быть список)
-Добавить метод, который выводит номер телефона сотрудника по имени (может быть список)
-Добавить метод, который ищет сотрудника по табельному номеру
-Добавить метод добавление нового сотрудника в справочник
+1. Добавить метод, который ищет сотрудника по стажу (может быть список)
+2. Добавить метод, который выводит номер телефона сотрудника по имени (может быть список)
+3. Добавить метод, который ищет сотрудника по табельному номеру
+4. Добавить метод добавление нового сотрудника в справочник
 */
 public class MainApp {
 
     public static void main(String[] args) {
 
-        Service<Employee> handbookService = new EmployeeHandbookService(new EmployeeHandbook());
+        // обращаемся к сервису (EmployeeHandbookService) в параметры передаем (EmployeeHandbook)
+        EmployeeHandbookService handbookService = new EmployeeHandbookService(new EmployeeHandbook());
 
-        //region add Employee to handbook 
+        //region Task4 добавляем работников в справочник
         Employee emp1 = new Employee("Pavel", "Ivanov", 4);
         emp1.setPhones(Arrays.asList("+79876543210", "+79634561245"));
 
@@ -47,7 +44,16 @@ public class MainApp {
         handbookService.add(emp4);
         //endregion
 
-        System.out.println(handbookService.findEmployeesByExperience(4));
+        //region Tasks
+        // Task1 метод, который ищет сотрудника по стажу (может быть список)
+        System.out.println(handbookService.findEmployeesByExperience(10));
+
+        // Task2 метод, который выводит номер телефона сотрудника по имени (может быть список)
+        System.out.println(handbookService.getPhonesByFullName("Alexey", "Petrov"));
+
+        // Task3 метод, который ищет сотрудника по табельному номеру
+        System.out.println(handbookService.getById(10002));
+        //endregion
     }
 
 }

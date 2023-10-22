@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="seminar_3&#10;commit #002">
+    <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="seminar_4&#10;commit #003">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/handlers/EmployeeHandbookHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/handlers/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/models/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/models/handbooks/EmployeeHandbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/models/handbooks/EmployeeHandbook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/models/handbooks/Handbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/models/handbooks/Handbook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/services/EmployeeHandbookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/services/EmployeeHandbookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/services/HandbookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/services/ServiceUtil.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -166,7 +166,8 @@
       <workItem from="1697475662007" duration="3669000" />
       <workItem from="1697648117622" duration="9000" />
       <workItem from="1697650033609" duration="20000" />
-      <workItem from="1697911732306" duration="3540000" />
+      <workItem from="1697911732306" duration="3771000" />
+      <workItem from="1697990598835" duration="2027000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1696172088185</created>
@@ -231,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697479346550</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="seminar_4&#10;commit #003">
+      <created>1697916629922</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697916629922</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +266,7 @@
     <MESSAGE value="seminar_2&#10;init commit #007&#10;added JavaDoc" />
     <MESSAGE value="seminar_3&#10;commit #001" />
     <MESSAGE value="seminar_3&#10;commit #002" />
-    <option name="LAST_COMMIT_MESSAGE" value="seminar_3&#10;commit #002" />
+    <MESSAGE value="seminar_4&#10;commit #003" />
+    <option name="LAST_COMMIT_MESSAGE" value="seminar_4&#10;commit #003" />
   </component>
 </project>
