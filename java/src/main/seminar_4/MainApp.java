@@ -39,17 +39,24 @@ public class MainApp {
         Handbook<Employee> handbook = new EmployeeHandbook();
         HandbookService<Employee> handbookService = new HandbookService<>(handbook);
 
-       // findEmployeesByExperience(handbookService.getHandbook(), 4);
-
-       
+        //region addEmployee
         Employee emp1 = new Employee("Pavel", "Ivanov", 4);
         emp1.setPhones(Arrays.asList("+79876543210", "+79634561245"));
 
+        Employee emp2 = new Employee("Ivan", "Pavlov", 1);
+        emp1.setPhones(Arrays.asList("+79876540987"));
+
+        Employee emp3 = new Employee("Alexey", "Petrov", 10);
+        emp1.setPhones(Arrays.asList("+79876541111"));
+
         handbookService.getHandbook().addElement(emp1);
+        handbookService.getHandbook().addElement(emp2);
+        handbookService.getHandbook().addElement(emp3);
+        //endregion
 
-        
+        List<Employee> employees = findEmployeesByExperience(handbookService.getHandbook(), 4);
 
-        System.out.println(emp1);
+        System.out.println(employees);
     }
 
 }
