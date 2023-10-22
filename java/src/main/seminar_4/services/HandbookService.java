@@ -1,6 +1,7 @@
 package src.main.seminar_4.services;
 
 import src.main.seminar_4.models.handbooks.Handbook;
+import java.util.List;
 
 public class HandbookService<E> {
 
@@ -23,7 +24,7 @@ public class HandbookService<E> {
     }
     
     public boolean remove(E e) {
-        return handbook.remove(e);
+        return handbook.removeElement(e);
     }
     
     public Handbook<E> getHandbook() {

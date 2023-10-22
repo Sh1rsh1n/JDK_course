@@ -34,6 +34,8 @@ public class MainApp {
         return list;
     }
 
+    
+
     public static void main(String[] args) {
 
         HandbookService<Employee> handbookService = new HandbookService<>(new EmployeeHandbook());
@@ -43,12 +45,12 @@ public class MainApp {
         emp1.setPhones(Arrays.asList("+79876543210", "+79634561245"));
 
         Employee emp2 = new Employee("Ivan", "Pavlov", 2);
-        emp1.setPhones(Arrays.asList("+79876540987"));
+        emp2.setPhones(Arrays.asList("+79876540987"));
 
         Employee emp3 = new Employee("Alexey", "Petrov", 10);
-        emp1.setPhones(Arrays.asList("+79876541111"));
+        emp3.setPhones(Arrays.asList("+79876541111"));
         
-        Employee emp3 = new Employee("Anna", "Kirova", 1);
+        Employee emp4 = new Employee("Anna", "Kirova", 1);
 
         handbookService.add(emp1);
         handbookService.add(emp2);
