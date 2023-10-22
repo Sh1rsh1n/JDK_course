@@ -36,22 +36,24 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        Handbook<Employee> handbook = new EmployeeHandbook();
-        HandbookService<Employee> handbookService = new HandbookService<>(handbook);
+        HandbookService<Employee> handbookService = new HandbookService<>(new EmployeeHandbook());
 
-        //region addEmployee
+        //region add Employee to handbook 
         Employee emp1 = new Employee("Pavel", "Ivanov", 4);
         emp1.setPhones(Arrays.asList("+79876543210", "+79634561245"));
 
-        Employee emp2 = new Employee("Ivan", "Pavlov", 1);
+        Employee emp2 = new Employee("Ivan", "Pavlov", 2);
         emp1.setPhones(Arrays.asList("+79876540987"));
 
         Employee emp3 = new Employee("Alexey", "Petrov", 10);
         emp1.setPhones(Arrays.asList("+79876541111"));
+        
+        Employee emp3 = new Employee("Anna", "Kirova", 1);
 
-        handbookService.getHandbook().addElement(emp1);
-        handbookService.getHandbook().addElement(emp2);
-        handbookService.getHandbook().addElement(emp3);
+        handbookService.add(emp1);
+        handbookService.add(emp2);
+        handbookService.add(emp3);
+        handbookService.add(emp4);
         //endregion
 
         List<Employee> employees = findEmployeesByExperience(handbookService.getHandbook(), 4);

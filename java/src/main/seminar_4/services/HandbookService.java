@@ -9,7 +9,23 @@ public class HandbookService<E> {
     public HandbookService(Handbook<E> handbook){
         this.handbook = handbook;
     }
+    
+    public boolean add(E e) {
+        return handbook.addElement(e);
+    }
 
+    public E getById(int id) {
+        return handbook.getElementById(id);
+    }
+    
+    public List<E> getAll() {
+        return handbook.getAll();
+    }
+    
+    public boolean remove(E e) {
+        return handbook.remove(e);
+    }
+    
     public Handbook<E> getHandbook() {
         return handbook;
     }
