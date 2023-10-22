@@ -24,21 +24,9 @@ import java.util.List;
 */
 public class MainApp {
 
-    private static List<Employee> findEmployeesByExperience(Handbook<Employee> handbook, int experience) {
-        List<Employee> list = new ArrayList<>();
-        for (Employee employee : handbook.getAll()) {
-            if (employee.getExperience() == experience) {
-                list.add(employee);
-            }
-        }
-        return list;
-    }
-
-    
-
     public static void main(String[] args) {
 
-        HandbookService<Employee> handbookService = new HandbookService<>(new EmployeeHandbook());
+        Service<Employee> handbookService = new HandbookService<>(new EmployeeHandbook());
 
         //region add Employee to handbook 
         Employee emp1 = new Employee("Pavel", "Ivanov", 4);
@@ -58,9 +46,7 @@ public class MainApp {
         handbookService.add(emp4);
         //endregion
 
-        List<Employee> employees = findEmployeesByExperience(handbookService.getHandbook(), 4);
-
-        System.out.println(employees);
+        System.out.println(handbookService.findEmployeesByExperience(4));
     }
 
 }
