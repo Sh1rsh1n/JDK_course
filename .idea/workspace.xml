@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="seminar_4&#10;commit #003">
+      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_5/solution_1/Table.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_5/solution_1/model/Fork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/main/seminar_5/solution_1/model/Philosopher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/models/handbooks/EmployeeHandbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/models/handbooks/EmployeeHandbook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/services/EmployeeHandbookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/services/EmployeeHandbookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_4/services/HandbookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_4/services/ServiceUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_5/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_5/solution_1/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_5/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_5/model/Fork.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_5/model/Philosopher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_5/model/PhilosopherAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/client/ChatClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/client/ChatClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/client/MainAppClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/client/MainAppClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/ChatServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/MainAppServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_1/chat/server/MainAppServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_2/chat_messanger/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JDK_course/src/main/seminar_2/chat_messanger/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,17 +30,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/java/src/main/seminar_5/Table.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2WAON70b4mPVWHsru9mQdf4TnfI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -41,14 +60,22 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/DevFolder/contact-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="src.main.test.atm_example" />
       <recent name="src.main.seminar_1.chat.client" />
       <recent name="src.main.seminar_1.chat.server" />
     </key>
@@ -63,26 +90,13 @@
       <recent name="src.main.temp.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.src.main.seminar_4.MainApp">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.temp.Main" />
-      <module name="JDK_course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.main.temp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.src.main.seminar_5.solution_1.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.seminar_3.MainApp" />
+      <option name="MAIN_CLASS_NAME" value="src.main.test.test2.MainApp" />
       <module name="JDK_course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.main.seminar_3.*" />
+          <option name="PATTERN" value="src.main.test.test2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainAppClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.seminar_1.chat.client.MainAppClient" />
+    <configuration name="src.main.seminar_5.solution_1.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.seminar_5.solution_1.MainApp" />
       <module name="JDK_course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.main.seminar_1.chat.client.*" />
+          <option name="PATTERN" value="src.main.seminar_5.solution_1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src.main.seminar_2.chat_messanger.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.seminar_2.chat_messanger.Main" />
+    <configuration name="src.main.seminar_5.solution_1.model.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.seminar_5.solution_1.model.MainApp" />
       <module name="JDK_course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.main.seminar_2.chat_messanger.*" />
+          <option name="PATTERN" value="src.main.seminar_5.solution_1.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +130,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src.main.seminar_4.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.seminar_4.MainApp" />
+    <configuration name="src.main.test.test3.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.test.test3.MainApp" />
       <module name="JDK_course" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.main.seminar_4.*" />
+          <option name="PATTERN" value="src.main.test.test3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src.main.test.test3.SelfTask" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.test.test3.SelfTask" />
+      <module name="JDK_course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.main.test.test3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.src.main.seminar_4.MainApp" />
+        <item itemvalue="Application.src.main.seminar_5.solution_1.MainApp" />
+        <item itemvalue="Application.src.main.seminar_5.solution_1.model.MainApp" />
+        <item itemvalue="Application.src.main.test.test3.SelfTask" />
+        <item itemvalue="Application.src.main.test.test3.MainApp" />
         <item itemvalue="Application.MainApp" />
-        <item itemvalue="Application.src.main.seminar_2.chat_messanger.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MainAppClient" />
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +195,17 @@
       <workItem from="1697650033609" duration="20000" />
       <workItem from="1697911732306" duration="3771000" />
       <workItem from="1697990598835" duration="2027000" />
+      <workItem from="1698345376670" duration="46000" />
+      <workItem from="1698345790451" duration="2517000" />
+      <workItem from="1698422267843" duration="4545000" />
+      <workItem from="1698427207846" duration="192000" />
+      <workItem from="1698427408379" duration="4598000" />
+      <workItem from="1698472149017" duration="11027000" />
+      <workItem from="1698491475466" duration="2970000" />
+      <workItem from="1698495787514" duration="2336000" />
+      <workItem from="1698508069368" duration="2769000" />
+      <workItem from="1698512755297" duration="7273000" />
+      <workItem from="1698563479404" duration="5378000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1696172088185</created>

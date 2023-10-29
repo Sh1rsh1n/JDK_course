@@ -21,6 +21,7 @@ out/
 *.iml
 *.ipr
 
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -33,3 +34,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/java/src/main/test/

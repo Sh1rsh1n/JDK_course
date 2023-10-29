@@ -1,4 +1,4 @@
-package src.main.seminar_5;
+package src.main.seminar_5.solution_1;
 
 
 
@@ -13,7 +13,8 @@ package src.main.seminar_5;
 public class MainApp {
 
     public static void main(String[] args) {
-        
+        Table table = new Table();
+        table.start();
     }
 
 }
