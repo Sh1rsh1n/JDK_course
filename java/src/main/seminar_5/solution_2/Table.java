@@ -15,7 +15,7 @@ import java.util.concurrent.CyclicBarrier;
  */
 public class Table {
 
-    private Philosopher[] philosophers = new Philosopher[5];
+    private solution_2.model.Philosopher[] philosophers = new Philosopher[5];
     private Lock[] forks = new Fork[5];
   private Semaphore semaphore;
 
@@ -28,7 +28,9 @@ public class Table {
      * Запуск потоков с философами, у которых вызываем метод eat()
      */
     public void start() {
-        
+        for (int i = 0; i < philosophers.length; i++) {
+          philosophers[i].start();
+        }
     }
 
     /**

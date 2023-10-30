@@ -36,10 +36,8 @@ public class Philosopher extends Thread {
     public void eat() {
         try {
           while (satiny < 3) {
-            if (leftFork.tryLock()) {
+            if (leftFork.tryLock() && semaphor.tryAcquire()) {
               if (rightFork.tryLock()) {
-
-                semaphore.acqure();
 
                 System.out.printf("Философ %s решил покушать.\nСхватил вилки # %s и # %s\n", name, leftFork.getForkNo(), rightFork.getForkNo());
 
@@ -50,6 +48,7 @@ public class Philosopher extends Thread {
                 think();
               } else {
                 leftFork.unlock();
+                semaphor.release();
               }
             }
             }
@@ -70,6 +69,8 @@ public class Philosopher extends Thread {
      */
     private void think() {
         System.out.printf("Философ %s думает.\n", name);
+
+        semaphor.release();
 
         leftFork.getLock().unlock();
         rightFork.getLock().unlock();
