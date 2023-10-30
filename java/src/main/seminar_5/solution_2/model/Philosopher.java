@@ -1,5 +1,6 @@
 package src.main.seminar_5.solution_2.model;
 
+import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
@@ -16,87 +17,90 @@ import java.util.concurrent.locks.Lock;
  */
 public class Philosopher extends Thread {
 
-    private final String name;
-    private final Fork leftFork;
-    private final Fork rightFork;
-    private int satiety;
-    private Semaphore semaphor;
+  private final String name;
+  private final Fork leftFork;
+  private final Fork rightFork;
+  private int satiety;
+  private Semaphore semaphor;
 
-    public Philosopher(String name, Fork leftFork, Fork rightFork, Semaphore semaphore) {
-        this.name = name;
-        this.rightFork = rightFork;
-        this.leftFork = leftFork;
-        this.semaphor = semaphore;
-    }
+  public Philosopher(String name, Fork leftFork, Fork rightFork, Semaphore semaphore) {
+    this.name = name;
+    this.rightFork = rightFork;
+    this.leftFork = leftFork;
+    this.semaphor = semaphore;
+  }
 
-    /**
-     * Метод имитации процесса приема пищи философом
-     * проверяет доступность вилок справа, слева и сытость философа
-     * далее, меняет доступность вилок и засыпает на 5 секунд, после вызывает метод размышления(think())
-     */
-    public void eat() {
-        try {
-          while (satiety < 3) {
-            if (leftFork.tryLock() && semaphor.tryAcquire()) {
-              System.out.printf("Философ %s взял левую вилку\n", name);
-              if (rightFork.tryLock()) {
-                System.out.printf("Философ %s взял правую вилку\n", name);
+  /**
+   * Метод имитации процесса приема пищи философом
+   * проверяет доступность вилок справа, слева и сытость философа
+   * далее, меняет доступность вилок и засыпает на 5 секунд, после вызывает метод
+   * размышления(think())
+   */
+  private void eat() {
+    Random rnd = new Random();
+    try {
+      while (satiety < 3) {
+        if (leftFork.tryLock()) {
+          System.out.printf("Философ %s взял левую вилку\n", name);
+          if (rightFork.tryLock()) {
+            semaphor.acquire();
+            System.out.printf("Философ %s взял правую вилку\n", name);
 
-                System.out.printf("У Философа %s теперь обе вилки # %s и # %s и он может поесть\n", name, leftFork.getForkNo(), rightFork.getForkNo());
-                System.out.println(name + "кушает");
+            System.out.printf("У Философа %s теперь обе вилки # %s и # %s и он может поесть\n", name,
+                leftFork.getForkNo(), rightFork.getForkNo());
+            
+            int msec = rnd.nextInt(10000);
 
-                Thread.sleep(3000);
+            System.out.println(name + " кушает " + msec);
 
-                satiety++;
+            Thread.sleep(msec);
 
-                System.out.printf("Философ %s наелся. Он поел уже %d\n", name, satiety);
+            satiety++;
 
-                think();
-                
-              } else {
-                leftFork.unlock();
-                semaphor.release();
-                System.out.println(name + " положил левую вилку, так как не смог взять правую.");
-                try {
-                  Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                  e.printStackTrace();
-                }
-              }
+            System.out.printf("Философ %s наелся. Он поел уже %d\n", name, satiety);
+
+            think();
+
+          } else {
+            leftFork.unlock();
+            semaphor.release();
+            System.out.println(name + " положил левую вилку, так как не смог взять правую.");
+            try {
+              Thread.sleep(5000);
+            } catch (InterruptedException e) {
+              e.printStackTrace();
             }
-            }
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        } finally {
-          leftFork.unlock();
-          rightFork.unlock();
+          }
         }
+      }
+    } catch (InterruptedException e) {
+      throw new RuntimeException(e);
     }
+  }
 
+  /**
+   * Метод, размышления
+   * меняет состояние вилок на "доступны" (true)
+   * засыпает на 5 секунд
+   */
+  private void think() {
+    
+    System.out.printf("Философ %s думает.\n", name);
 
+    semaphor.release();
 
-    /**
-     * Метод, размышления
-     * меняет состояние вилок на "доступны" (true)
-     * засыпает на 5 секунд
-     */
-    private void think() {
-        System.out.printf("Философ %s думает.\n", name);
+    leftFork.unlock();
+    rightFork.unlock();
 
-        semaphor.release();
-
-        leftFork.unlock();
-        rightFork.unlock();
-
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    try {
+      Thread.sleep(5000);
+    } catch (InterruptedException e) {
+      throw new RuntimeException(e);
     }
+  }
 
-    @Override
-    public void run() {
-        eat();
-    }
+  @Override
+  public void run() {
+    eat();
+  }
 }
