@@ -13,21 +13,19 @@ import java.util.concurrent.TimeUnit;
  * @rigthFork - вилка справа от философа
  * @satiety - сытости философа
  */
-public class Philosopher implements Runnable{
+public class Philosopher extends Thread {
 
     private final String name;
-    private final Fork leftFork;
-    private final Fork rightFork;
+    private final Lock leftFork;
+    private final Lock rightFork;
     private int satiety;
+    private Semaphore semaphor;
 
-    public Philosopher(String name, Fork leftFork, Fork rightFork) {
+    public Philosopher(String name, Fork leftFork, Fork rightFork, Semaphore semaphore) {
         this.name = name;
         this.rightFork = rightFork;
         this.leftFork = leftFork;
-    }
-
-    public int getSatiety() {
-        return satiety;
+        this.semafor = semaphore;
     }
 
     /**
@@ -37,7 +35,11 @@ public class Philosopher implements Runnable{
      */
     public void eat() {
         try {
-            if (leftFork.getLock().tryLock(6L, TimeUnit.SECONDS) && rightFork.getLock().tryLock(6L, TimeUnit.SECONDS) && satiety < 3) {
+          while (satiny < 3) {
+            if (leftFork.tryLock()) {
+              if (rightFork.tryLock()) {
+
+                semaphore.acqure();
 
                 System.out.printf("Философ %s решил покушать.\nСхватил вилки # %s и # %s\n", name, leftFork.getForkNo(), rightFork.getForkNo());
 
@@ -46,9 +48,16 @@ public class Philosopher implements Runnable{
                 System.out.printf("Философ %s наелся. Он поел уже %d\n", name, ++satiety);
 
                 think();
+              } else {
+                leftFork.unlock();
+              }
+            }
             }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
+        } finally {
+          leftFork.unlock();
+          rightFork.unlock();
         }
     }
 

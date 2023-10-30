@@ -16,22 +16,19 @@ import java.util.concurrent.CyclicBarrier;
 public class Table {
 
     private Philosopher[] philosophers = new Philosopher[5];
-    private Fork[] forks = new Fork[5];
+    private Lock[] forks = new Fork[5];
+  private Semaphore semaphore;
 
     public Table() {
-        init();
+      semaphore = new Semaphore(2);
+      init();
     }
 
     /**
      * Запуск потоков с философами, у которых вызываем метод eat()
      */
     public void start() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; i < 5; i++) {
-                int finalI = j;
-                new Thread(philosophers[finalI]).start();
-            }
-        }
+        
     }
 
     /**
@@ -46,11 +43,11 @@ public class Table {
         System.out.println("Вилки разложены");
 
         // philosophers init
-        philosophers[0] = new Philosopher("Платон", forks[4], forks[0]);
-        philosophers[1] = new Philosopher("Аристотель", forks[0], forks[1]);
-        philosophers[2] = new Philosopher("Гераклит", forks[1], forks[2]);
-        philosophers[3] = new Philosopher("Демокрит", forks[2], forks[3]);
-        philosophers[4] = new Philosopher("Гиппократ", forks[3], forks[4]);
+        philosophers[0] = new Philosopher("Платон", forks[4], forks[0], semaphore);
+        philosophers[1] = new Philosopher("Аристотель", forks[0], forks[1], semaphore);
+        philosophers[2] = new Philosopher("Гераклит", forks[1], forks[2], semaphore);
+        philosophers[3] = new Philosopher("Демокрит", forks[2], forks[3], semaphore);
+        philosophers[4] = new Philosopher("Гиппократ", forks[3], forks[4], semaphore);
 
         System.out.println("Философы уселись за стол");
     }
