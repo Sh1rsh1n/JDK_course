@@ -3,6 +3,7 @@ package src.main.seminar_5.solution_2.model;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 /**
  * Класс, Философ
@@ -16,8 +17,8 @@ import java.util.concurrent.TimeUnit;
 public class Philosopher extends Thread {
 
     private final String name;
-    private final Lock leftFork;
-    private final Lock rightFork;
+    private final Fork leftFork;
+    private final Fork rightFork;
     private int satiety;
     private Semaphore semaphor;
 
@@ -25,7 +26,7 @@ public class Philosopher extends Thread {
         this.name = name;
         this.rightFork = rightFork;
         this.leftFork = leftFork;
-        this.semafor = semaphore;
+        this.semaphor = semaphore;
     }
 
     /**
@@ -35,20 +36,32 @@ public class Philosopher extends Thread {
      */
     public void eat() {
         try {
-          while (satiny < 3) {
+          while (satiety < 3) {
             if (leftFork.tryLock() && semaphor.tryAcquire()) {
+              System.out.printf("Философ %s взял левую вилку\n", name);
               if (rightFork.tryLock()) {
+                System.out.printf("Философ %s взял правую вилку\n", name);
 
-                System.out.printf("Философ %s решил покушать.\nСхватил вилки # %s и # %s\n", name, leftFork.getForkNo(), rightFork.getForkNo());
+                System.out.printf("У Философа %s теперь обе вилки # %s и # %s и он может поесть\n", name, leftFork.getForkNo(), rightFork.getForkNo());
+                System.out.println(name + "кушает");
 
                 Thread.sleep(3000);
 
-                System.out.printf("Философ %s наелся. Он поел уже %d\n", name, ++satiety);
+                satiety++;
+
+                System.out.printf("Философ %s наелся. Он поел уже %d\n", name, satiety);
 
                 think();
+                
               } else {
                 leftFork.unlock();
                 semaphor.release();
+                System.out.println(name + " положил левую вилку, так как не смог взять правую.");
+                try {
+                  Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                  e.printStackTrace();
+                }
               }
             }
             }
@@ -72,8 +85,8 @@ public class Philosopher extends Thread {
 
         semaphor.release();
 
-        leftFork.getLock().unlock();
-        rightFork.getLock().unlock();
+        leftFork.unlock();
+        rightFork.unlock();
 
         try {
             Thread.sleep(5000);
