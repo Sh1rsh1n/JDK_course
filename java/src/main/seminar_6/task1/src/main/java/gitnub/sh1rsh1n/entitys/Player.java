@@ -9,6 +9,11 @@ public class Player {
     public Player(BoxBroker broker) {
         this.broker = broker;
     }
+    public Player() {}
+
+    public void setBoxBroker(BoxBroker broker) {
+        this.broker = broker;
+    }
 
     public boolean choiceBox(){
         int value = new Random().nextInt(3);

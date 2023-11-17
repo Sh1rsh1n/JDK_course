@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Random;
 
 import main.java.gitnub.sh1rsh1n.entitys.BoxBroker;
+import main.java.gitnub.sh1rsh1n.entitys.Player;
 
 public class App {
 
@@ -25,7 +26,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-        BoxBroker broker = new BoxBroker();
+
+        Player player = new Player();
+        BoxBroker broker = new BoxBroker(player);
         test(broker);
     }
 }
