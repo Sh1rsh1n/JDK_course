@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="460f2c24-0a10-4013-a127-04607adff606" name="Changes" comment="seminar_5&#10;commit #004&#10;solution #2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_5/solution_2/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_5/solution_2/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_5/solution_2/model/Philosopher.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_5/solution_2/model/Philosopher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_6/task1/src/main/java/gitnub/sh1rsh1n/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_6/task1/src/main/java/gitnub/sh1rsh1n/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_6/task1/src/main/java/gitnub/sh1rsh1n/entitys/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_6/task1/src/main/java/gitnub/sh1rsh1n/entitys/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_6/task1/src/main/java/gitnub/sh1rsh1n/entitys/BoxBroker.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_6/task1/src/main/java/gitnub/sh1rsh1n/entitys/BoxBroker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/main/seminar_6/task1/src/main/java/gitnub/sh1rsh1n/entitys/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/main/seminar_6/task1/src/main/java/gitnub/sh1rsh1n/entitys/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,24 +44,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dev/IdeaProjects/JDK_course/java/src/main/seminar_5/solution_2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "/home/dev/IdeaProjects/JDK_course/java/src/main/seminar_5/solution_2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="src.main.test.atm_example" />
@@ -79,7 +82,20 @@
       <recent name="src.main.temp.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.src.main.seminar_5.solution_2.MainApp">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.main.seminar_6.task1.src.main.java.gitnub.sh1rsh1n.App" />
+      <module name="JDK_course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.main.seminar_6.task1.src.main.java.gitnub.sh1rsh1n.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExecutorServiceApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.test.multithreading.src.main.java.com.flamexander.multithreading.p1_thread_creation_and_base.ExecutorServiceApp" />
       <module name="JDK_course" />
@@ -119,19 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src.main.seminar_5.solution_1.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.main.seminar_5.solution_1.MainApp" />
-      <module name="JDK_course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.main.seminar_5.solution_1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="src.main.seminar_5.solution_2.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.main.seminar_5.solution_2.MainApp" />
       <module name="JDK_course" />
@@ -147,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.src.main.seminar_5.solution_2.MainApp" />
         <item itemvalue="Application.ExecutorServiceApp" />
         <item itemvalue="Application.ProdConsExample" />
         <item itemvalue="Application.MainApp" />
-        <item itemvalue="Application.src.main.seminar_5.solution_1.MainApp" />
       </list>
     </recent_temporary>
   </component>
@@ -197,6 +200,7 @@
       <workItem from="1698563479404" duration="7451000" />
       <workItem from="1698581154032" duration="16091000" />
       <workItem from="1698685250713" duration="3360000" />
+      <workItem from="1700246850820" duration="506000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1696172088185</created>
