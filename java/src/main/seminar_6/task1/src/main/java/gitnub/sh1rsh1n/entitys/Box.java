@@ -1,6 +1,6 @@
-package main.java.gitnub.sh1rsh1n.entitys.cards;
+package main.java.gitnub.sh1rsh1n.entitys;
 
-public class Card {
+public class Box {
     
     private String title;
 
@@ -12,9 +12,7 @@ public class Card {
         this.title = title;
     }
 
-    public Card(String title) {
+    public Box(String title) {
         this.title = title;
     }
-
-
 }

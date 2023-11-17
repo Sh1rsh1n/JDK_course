@@ -1,24 +1,22 @@
 package main.java.gitnub.sh1rsh1n.entitys;
 
+import java.util.Random;
+
 public class Player {
     
-    private CardBroker broker;
-    
+    private BoxBroker broker;
 
-    public CardBroker getBroker() {
-        return broker;
-    }
-
-    public void setBroker(CardBroker broker) {
+    public Player(BoxBroker broker) {
         this.broker = broker;
     }
 
-    public Player(CardBroker broker) {
-        this.broker = broker;
-        
+    public boolean choiceBox(){
+        int value = new Random().nextInt(3);
+        System.out.printf("Выбрана коробка %d\n", value);
+        return broker.answer(value);
     }
 
-    public void choiceCard(){
-        broker.
+    public boolean openBox(){
+        return new Random().nextBoolean();
     }
 }
